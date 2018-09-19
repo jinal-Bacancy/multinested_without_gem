@@ -8,4 +8,21 @@
     	<i class="fa fa-remove fa-2x"></i>
    	<% end -%>
   </td>
+  <td>
+    <div class="form-actions">
+      <%# binding.pry %>
+      <%= link_to  'javascript:void(0)',class:" btn add_record_comment",data:{ 
+                    id:@nested_id, 
+                    "nested-comment-html":nested_content_comment(:comments,f,@nested_id).html_safe
+                   } do %>
+        <i class='fa fa-plus'></i>
+      <% end -%>
+    </div>
+  </td>
+</tr>
+
+<tr id='comments'>
+  <%= f.simple_fields_for :comments do |builder_comment| %>
+    <%= render 'comment', f: builder_comment %>
+  <% end %>
 </tr>

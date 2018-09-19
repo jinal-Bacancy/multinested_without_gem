@@ -1,0 +1,10 @@
+<tr>
+<td><%= f.input :comment, label: false %></td>
+<td>
+  <%= f.input_field :_destroy, as: :hidden %>
+  <%= link_to 'javascript:void(0)', class: 'destroy_record_comment btn red darken-4' do %>
+  	<i class="fa fa-remove fa-2x"></i>
+ 	<% end -%>
+</td>
+
+</tr>

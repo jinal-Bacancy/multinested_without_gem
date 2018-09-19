@@ -10,6 +10,7 @@
           <th>Description</th>
           <th>
             <div class="form-actions">
+              <%# binding.pry %>
               <%= link_to  'javascript:void(0)',class:"green darken-2 btn add_record",data:{ 
                             id:@nested_id, 
                             "nested-html":nested_content(:tasks,form,@nested_id).html_safe
